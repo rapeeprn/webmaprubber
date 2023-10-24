@@ -58,7 +58,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1
+         maxZoom: 22, minZoom: 1
     })
 });
 
@@ -68,20 +68,7 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
-    var searchLayer = new SearchLayer({
-      layer: lyr_Amphoe_PROV_1,
-      colName: 'TH_Provinc',
-      zoom: 10,
-      collapsed: true,
-      map: map
-    });
-
-    map.addControl(searchLayer);
-    document.getElementsByClassName('search-layer')[0]
-    .getElementsByTagName('button')[0].className +=
-    ' fa fa-binoculars';
-    
-map.getView().fit([11037957.714838, 1728388.804459, 11335393.897361, 1993235.528712], map.getSize());
+map.getView().fit([11166938.528555, 1698323.881689, 11464374.711078, 1963170.605942], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
